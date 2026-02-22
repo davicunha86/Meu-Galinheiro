@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Supremo de Criação - Versão Final com Checklist</title>
+    <style>
+        :root {
+            --primary: #1b5e20;
+            --secondary: #fbc02d;
+            --danger: #d32f2f;
+            --alert: #f57f17;
+            --bg: #f4f7f6;
+            --white: #ffffff;
+            --dark: #212121;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background: var(--bg); margin: 0; padding: 0; }
+        
+        header { background: var(--primary); color: white; padding: 50px 20px; text-align: center; border-bottom: 10px solid var(--secondary); }
+        
+        .container { max-width: 1000px; margin: 30px auto; padding: 30px; background: var(--white); border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.15); }
+
+        h1, h2, h3 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h1 { border-left: 10px solid var(--secondary); text-transform: uppercase; }
+
+        .section-img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin: 20px 0; border: 1px solid #ddd; }
+        
+        .alert-box { background: #ffebee; border-left: 8px solid var(--danger); padding: 25px; margin: 25px 0; border-radius: 5px; font-weight: bold; }
+        .tip-box { background: #e8f5e9; border-left: 8px solid var(--primary); padding: 25px; margin: 25px 0; border-radius: 5px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        td { padding: 15px; border: 1px solid #eee; vertical-align: top; }
+        tr:nth-child(even) { background: #f9f9f9; }
+
+        /* Estilos do Checklist Interativo */
+        .checklist-container { background: #333; color: white; padding: 30px; border-radius: 15px; margin-top: 50px; position: sticky; bottom: 20px; border: 4px solid var(--secondary); }
+        .checklist-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 1.1rem; cursor: pointer; }
+        .checklist-item input { width: 25px; height: 25px; margin-right: 15px; accent-color: var(--secondary); }
+        .progress-bar { width: 100%; background: #555; height: 10px; border-radius: 5px; margin-bottom: 20px; overflow: hidden; }
+        #progress-fill { height: 100%; background: var(--secondary); width: 0%; transition: 0.3s; }
+
+        .topic-list { list-style: none; padding-left: 0; }
+        .topic-list li { margin-bottom: 15px; padding-left: 25px; position: relative; }
+        .topic-list li::before { content: "✔"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+
+        .badge { display: inline-block; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; }
+        .badge-danger { background: var(--danger); color: white; }
+
+        footer { text-align: center; padding: 40px; color: #666; font-size: 0.9rem; margin-top: 60px; }
+
+        @media (max-width: 600px) { .section-img { height: 200px; } .checklist-container { position: relative; bottom: 0; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Manual Supremo de Criação</h1>
+    <p>Consolidado Técnico e Checklist Diário - Brasília/DF</p>
+</header>
+
+<div class="container">
+
+    <section id="infraestrutura">
+        <h1>1. Infraestrutura e Alojamento</h1>
+        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1000" class="section-img">
+        
+        <h3>1.1. O Galinheiro (Instalação Fixa)</h3>
+        <p>Espaço para 5 aves focado em segurança e ventilação:</p>
+        <ul class="topic-list">
+            <li><strong>Fundação:</strong> Chão de terra batida com 10 a 15 cm de Cama Sobreposta (maravalha seca) para neutralizar o odor.</li>
+            <li><strong>Fechamento Lateral:</strong> Use pallets ou sobras. Fechar lados do vento sul e chuva. Leste telado para sol.</li>
+            <li><strong>Teto:</strong> 100% impermeável. Jamais permita goteiras (berço de bactérias).</li>
+            <li><strong>Poleiros e Ninhos:</strong> Galhos de 3-5cm a 50cm do chão. Caixas de 30x30cm (1 para cada 3 aves).</li>
+        </ul>
+
+        <h3>1.2. O Alojamento do Porquinho-da-índia</h3>
+        <ul class="topic-list">
+            <li><strong>Isolamento:</strong> Cercado próprio. Nunca solto com o galo sem supervisão.</li>
+            <li><strong>Proteção Térmica:</strong> Sensível ao frio de Brasília. Deve ter casinha de madeira ou PVC.</li>
+        </ul>
+        <div class="alert-box">RISCO DE PNEUMONIA: Porquinho molhado tem 90% de chance de morte. Mantenha 100% seco.</div>
+    </section>
+
+    <section id="manejo">
+        <h1>2. Manejo e Soltura Tardia</h1>
+        <img src="https://images.unsplash.com/photo-1594489428504-5c0c480a15fd?q=80&w=1000" class="section-img">
+        <h3>Fim do Mau Cheiro no Gramado</h3>
+        <ul class="topic-list">
+            <li><strong>Soltura Tardia:</strong> Apenas entre 16:30 e 18:00. Isso concentra 90% das fezes no galinheiro.</li>
+            <li><strong>Solução para Chuva:</strong> NÃO solte sob o container. Gera lodo fétido e pneumonia.</li>
+            <li><strong>Neutralização:</strong> Use Calcário Agrícola no gramado caso sinta cheiro de amônia.</li>
+        </ul>
+    </section>
+
+    <section id="observacao">
+        <h1>3. Guia de Observação Clínica</h1>
+        <h3>3.1. O Termômetro das Fezes</h3>
+        <table>
+            <tr><th>Tipo de Fezes</th><th>Significado</th><th>Ação</th></tr>
+            <tr><td>Marrom/Branco</td><td>Normal</td><td>Nenhuma</td></tr>
+            <tr><td>Laranja Espumosa</td><td>Alerta Proteína</td><td>Corte sobras, use ração seca</td></tr>
+            <tr><td>Sangue / Rosa</td><td><span class="badge badge-danger">COCCIDIOSE</span></td><td>Isolar e tratar com Sulfa</td></tr>
+            <tr><td>Diarreia (Porquinho)</td><td><span class="badge badge-danger">EMERGÊNCIA</span></td><td>Apenas feno e água</td></tr>
+        </table>
+
+        <h3>3.2. Sinais Comportamentais</h3>
+        <p><strong>Saudável:</strong> Crista vermelha, ativa, bica o chão, cuí-cuí insistente.</p>
+        <p><strong>Doente:</strong> "Embolada", cabeça sob a asa, ronco (gogo), silêncio absoluto no porquinho.</p>
+    </section>
+
+    <section id="alimentacao">
+        <h1>4. Nutrição e Restrições</h1>
+        <div class="tip-box">
+            <p><strong>PROIBIDO:</strong> Cebola, alho, comida com sal, batata crua, abacate e pão embolorado.</p>
+            <p><strong>BIZU:</strong> Casca de ovo torrada (Cálcio) e semente de mamão verde (Vermífugo).</p>
+        </div>
+    </section>
+
+    <section id="farmacia">
+        <h1>5. Farmácia e Compras</h1>
+        <ul class="topic-list">
+            <li><strong>Mensal:</strong> Ração Postura (20kg), Quirela (5kg), Feno Tifton, Maravalha.</li>
+            <li><strong>Remédios:</strong> Terramicina Pó, Avitrin Vermífugo, Vinagre de Maçã, Violeta Genciana.</li>
+        </ul>
+    </section>
+
+    <div class="checklist-container">
+        <h3>✅ Checklist de Ronda Diária</h3>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+        
+        <label class="checklist-item"><input type="checkbox" class="task"> Lavar bebedouros e trocar água (07:00)</label>
+        <label class="checklist-item"><input type="checkbox" class="task"> Fornecer 500g de Ração de Postura</label>
+        <label class="checklist-item"><input type="checkbox" class="task"> Conferir Feno e Vit. C do Porquinho</label>
+        <label class="checklist-item"><input type="checkbox" class="task"> Inspeção de Fezes e Ronco (Respiração)</label>
+        <label class="checklist-item"><input type="checkbox" class="task"> Coletar ovos (Evitar bicadas)</label>
+        <label class="checklist-item"><input type="checkbox" class="task"> Soltura Tardia (16:30)</label>
+        <label class="checklist-item"><input type="checkbox" class="task"> Trancar com Milho e Conferir Trincos (18:00)</label>
+    </div>
+
+</div>
+
+<footer>
+    <p>Padrão ABNT Consultados: EMBRAPA (2024), MAPA (2023), CFMV (2025).</p>
+    <p>© 2026 - Guia Davi Cunha - Brasília/DF</p>
+</footer>
+
+<script>
+    const tasks = document.querySelectorAll('.task');
+    const fill = document.getElementById('progress-fill');
+
+    tasks.forEach(task => {
+        task.addEventListener('change', () => {
+            const completed = document.querySelectorAll('.task:checked').length;
+            const percent = (completed / tasks.length) * 100;
+            fill.style.width = percent + '%';
+        });
+    });
+</script>
+
+</body>
+</html>
